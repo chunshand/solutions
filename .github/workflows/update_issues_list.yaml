@@ -1,7 +1,7 @@
 name: update_issues_list
 on:
   schedule:
-    - cron: "0 0/2 * * *" # 没两分钟
+    - cron: "0 0/1 * * *"
 
 jobs:
   update_issues_list:
@@ -16,10 +16,13 @@ jobs:
           node-version: "14"
 
       - name: Install Dependency
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
         run: |
           npm install
           npm install axios         
-          content=$(node ./scripts/update_issues_list.js)
+          # content=$(node ./scripts/update_issues_list.js)
           git add README.md
+          echo "test" >> README.md
           git commit -m "Update issues list"
           git push
