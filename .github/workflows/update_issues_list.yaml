@@ -24,10 +24,10 @@ jobs:
           npm install
           npm install axios         
           # content=$(node ./scripts/update_issues_list.js)
+          echo "test" >> README.md
           git add README.md
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          echo "test" >> README.md
           git commit -m "Update issues list"
           git push
 
