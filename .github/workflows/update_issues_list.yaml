@@ -26,8 +26,8 @@ jobs:
           # content=$(node ./scripts/update_issues_list.js)
           echo "test" >> README.md
           git add README.md
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --local user.email "1484082125@qq.com"
+          git config --local user.name "1484082125@qq.com"
           git commit -m "Update issues list"
           git push
 
