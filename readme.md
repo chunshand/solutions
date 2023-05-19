@@ -5,13 +5,13 @@
 
 ## 分类
 
-- Vite
-- Webpack
-- JavaScript
-- uni-app
-- 微信小程序
-- flutter
-- Node
+- [Vite](https://github.com/chunshand/solutions/issues?q=[Vite])
+- [Webpack](https://github.com/chunshand/solutions/issues?q=[Webpack])
+- [JavaScript](https://github.com/chunshand/solutions/issues?q=[JavaScript])
+- [uni-app](https://github.com/chunshand/solutions/issues?q=[uni-app])
+- [微信小程序](https://github.com/chunshand/solutions/issues?q=[微信小程序])
+- [Flutter](https://github.com/chunshand/solutions/issues?q=[Flutter])
+- [NodeJS](https://github.com/chunshand/solutions/issues?q=[NodeJS])
 
 ## 贡献
 
