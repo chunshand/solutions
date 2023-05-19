@@ -1,5 +1,8 @@
 name: update_issues_list
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "0 0/1 * * *"
 
