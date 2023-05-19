@@ -12,7 +12,16 @@
 - [微信小程序](https://github.com/chunshand/solutions/issues?q=[微信小程序])
 - [Flutter](https://github.com/chunshand/solutions/issues?q=[Flutter])
 - [NodeJS](https://github.com/chunshand/solutions/issues?q=[NodeJS])
+- [想法建议](https://github.com/chunshand/solutions/issues?q=[想法建议])
+
+## 更新
+
+后期采用github action定时获取 `issues` 展示在当前`readme.md`中
 
 ## 贡献
 
-- 发出`issues`，标题格式为 `[分类名称]解决方案标题`
+- 创建`issues`，标题格式为 `[分类名称]解决方案标题`
+
+## 最后
+
+还有哪些分类？或者还有什么问题和想法，都可以创建 `issues` 来表述
