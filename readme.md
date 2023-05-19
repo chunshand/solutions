@@ -8,13 +8,11 @@
 - Vite
 - Webpack
 - JavaScript
-  - [forEach范围问题](/JavaScript/forEach范围问题)
+- uni-app
+- 微信小程序
+- flutter
+- Node
 
 ## 贡献
 
-- 每个分类在根目录存在相同名称的文件夹
-- 文件名称即解决办法名称，且需要根目录`readme.md`对应分类下添加链接
-
-## 注
-
-注意文件名称空格问题
+- 发出`issues`，标题格式为 `[分类名称]解决方案标题`
