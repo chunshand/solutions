@@ -1,0 +1,25 @@
+name: update_issues_list
+on:
+  schedule:
+    - cron: "0 0/2 * * *" # 没两分钟
+
+jobs:
+  update_issues_list:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@main #采用main分支下的
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2 #安装node.js
+        with:
+          node-version: "14"
+
+      - name: Install Dependency
+        run: |
+          npm install
+          npm install axios         
+          content=$(node ./scripts/update_issues_list.js)
+          git add README.md
+          git commit -m "Update issues list"
+          git push
