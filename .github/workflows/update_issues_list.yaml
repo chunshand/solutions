@@ -26,6 +26,8 @@ jobs:
           npm install
           npm install axios         
           node ./scripts/update_issues_list.js
+          git add .
+          git commit -m "action update"
       - name: push
         uses: ad-m/github-push-action@master
         with:
