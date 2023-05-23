@@ -54,7 +54,7 @@ function exportMd() {
 
     })
     console.log(content);
-    fs.writeFile('./README.md', content)
+    fs.writeFileSync('./README.md', content)
 }
 async function run() {
     console.log("[action]:run");
