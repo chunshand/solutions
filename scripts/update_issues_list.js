@@ -11,6 +11,7 @@ let IssuesMap = {
 
 };
 async function handleGetIssues(page = 1) {
+    console.log("[action]:handleGetIssues");
     let params = {
         'state': 'all',
         'fields': 'title,number',
@@ -27,6 +28,7 @@ async function handleGetIssues(page = 1) {
     return arr;
 }
 function handleMap(data) {
+    console.log("[action]:handleMap");
     data.forEach(item => {
         let a1 = item.title.search(/\[/)
         let a2 = item.title.search(/\]/)
@@ -40,6 +42,7 @@ function handleMap(data) {
     });
 }
 function exportMd() {
+    console.log("[action]:exportMd");
     let content = '';
     Topic.forEach((topic) => {
         if (IssuesMap[topic]) {
@@ -50,9 +53,11 @@ function exportMd() {
         }
 
     })
+    console.log(content);
     fs.writeFile('./README.md', content)
 }
 async function run() {
+    console.log("[action]:run");
     IssuesMap = {};
     let page = 1;
     while (page > 0) {
