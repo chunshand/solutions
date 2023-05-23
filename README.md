@@ -7,10 +7,10 @@
 
 
 **github**
-- [ssh方式解决代码总是推送失败问](https://api.github.com/repos/chunshand/solutions/issues/2)
+- [ssh方式解决代码总是推送失败问题](https://github.com/chunshand/solutions/issues/2)
 
 **Vite**
-- [多页面配](https://api.github.com/repos/chunshand/solutions/issues/1)
+- [多页面配置](https://github.com/chunshand/solutions/issues/1)
 
 
 ## 更新
