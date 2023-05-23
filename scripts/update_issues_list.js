@@ -55,7 +55,6 @@ function exportMd() {
     })
     const tpl_data = fs.readFileSync('./README.TPL.md')
     content = String(tpl_data).replace("{{CONTENT}}", content)
-    console.log(content);
     fs.writeFileSync('./README.md', content)
 }
 async function run() {
