@@ -1,6 +1,7 @@
 
 const axios = require('axios');
 const https = require('https');
+const fs = require('fs');
 
 const agent = new https.Agent({
     rejectUnauthorized: false
@@ -49,7 +50,7 @@ function exportMd() {
         }
 
     })
-    console.log(content);
+    fs.writeFile('./README.md', content)
 }
 async function run() {
     IssuesMap = {};

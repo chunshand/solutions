@@ -3,15 +3,17 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: "0 0/1 * * *"
+  # schedule:
+  #   - cron: "0 0/1 * * *"
 
 jobs:
   update_issues_list:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@main #采用main分支下的
+      - name: actions-checkout
+        uses: actions/checkout@main #采用main分支下的
+
       - name: Setup Node.js
         uses: actions/setup-node@v2 #安装node.js
         with:
@@ -23,11 +25,8 @@ jobs:
         run: |
           npm install
           npm install axios         
-          # content=$(node ./scripts/update_issues_list.js)
-          echo "test" >> README.md
-          git add README.md
-          git config --local user.email "1484082125@qq.com"
-          git config --local user.name "1484082125@qq.com"
-          git commit -m "Update issues list"
-          git push
-
+          node ./scripts/update_issues_list.js
+      - name: push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
