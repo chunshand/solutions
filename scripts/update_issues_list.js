@@ -46,13 +46,16 @@ function exportMd() {
     let content = '';
     Topic.forEach((topic) => {
         if (IssuesMap[topic]) {
-            content += `##${topic}##\r\n`
+            content += `\r\n**${topic}**\r\n`
             IssuesMap[topic].forEach((item) => {
                 content += `- [${item.title}](${item.url})\r\n`
             })
         }
 
     })
+    const tpl_data = fs.readFileSync('./README.TPL.md')
+    console.log(String(tpl_data));
+    content = String(tpl_data).replace("{{CONTENT}}", content)
     console.log(content);
     fs.writeFileSync('./README.md', content)
 }
