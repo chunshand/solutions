@@ -21,7 +21,7 @@ async function handleGetIssues(page = 1) {
     let res = await axios.get('https://api.github.com/repos/chunshand/solutions/issues', { httpsAgent: agent, params })
     let arr = res.data.map((item) => {
         return {
-            url: item.url,
+            url: item.html_url,
             title: item.title,
         }
     })
@@ -33,7 +33,7 @@ function handleMap(data) {
         let a1 = item.title.search(/\[/)
         let a2 = item.title.search(/\]/)
         item.topic = item.title.slice(a1 + 1, a2)
-        item.title = item.title.slice(a2 + 1, item.title.length - 1)
+        item.title = item.title.slice(a2 + 1)
         if (!IssuesMap[item.topic]) {
             IssuesMap[item.topic] = [];
             Topic.push(item.topic);
