@@ -26,6 +26,8 @@ jobs:
           npm install
           npm install axios         
           node ./scripts/update_issues_list.js
+          git config --global user.email "1484082125@qq.com"
+          git config --global user.name "chunshan"
           git add .
           git commit -m "action update"
       - name: push
